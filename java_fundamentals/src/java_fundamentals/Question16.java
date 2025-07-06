@@ -5,9 +5,8 @@ import java.util.Scanner;
 public class Question16 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner sc=new Scanner(System.in);
-		int s=0;
+		try (Scanner sc = new Scanner(System.in)) {
+		}
 		for(int i=10;i<=99;i++) {
 			boolean p=true;
 			for(int j=2;j<=Math.sqrt(i);j++) {

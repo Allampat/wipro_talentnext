@@ -1,8 +1,9 @@
 package java_fundamentals;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class Question22 {
+public class Question28 {
 
 	public static void main(String[] args) {
 		try (Scanner sc = new Scanner(System.in)) {
@@ -11,21 +12,19 @@ public class Question22 {
 			for(int i=0;i<n;i++) {
 				arr[i]=sc.nextInt();
 			}
-			int min=arr[0];
-			int max=arr[0];
-			for(int i=1;i<n;i++) {
-				if(arr[i]<min) {
-					min=arr[i];
+			int[]ar=new int[n];
+			int j=0;
+			for(int i=0;i<n;i++) {
+				if(arr[i]!=10) {
+					ar[j]=arr[i];
+				}else {
+					j--;
 				}
+				j++;
 			}
-			System.out.println(min);
-			for(int i=1;i<n;i++) {
-				if(arr[i]>max) {
-					max=arr[i];
-				}
-			}
-			System.out.println(max);
+			System.out.println(Arrays.toString(ar));
 		}
 	}
+	
 
 }
