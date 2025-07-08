@@ -40,7 +40,6 @@ class Square extends shape{
 public class Question7 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		shape s;
 		s=new Circle();
 		s.draw();

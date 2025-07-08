@@ -36,18 +36,18 @@ class Employee extends Person{
 public class Question5 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner sc=new Scanner(System.in);
-		String name=sc.nextLine();
-		double salary=sc.nextDouble();
-		int year=sc.nextInt();
-		sc.nextLine();
-		String insurance=sc.nextLine();
-		Employee em=new Employee(name,salary,year,insurance);
-		System.out.println(em.getname());
-		System.out.println(em.getsalary());
-		System.out.println(em.getyear());
-		System.out.println(em.getinsurance());
+		try (Scanner sc = new Scanner(System.in)) {
+			String name=sc.nextLine();
+			double salary=sc.nextDouble();
+			int year=sc.nextInt();
+			sc.nextLine();
+			String insurance=sc.nextLine();
+			Employee em=new Employee(name,salary,year,insurance);
+			System.out.println(em.getname());
+			System.out.println(em.getsalary());
+			System.out.println(em.getyear());
+			System.out.println(em.getinsurance());
+		}
 		
 		
 	}

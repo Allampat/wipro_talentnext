@@ -47,17 +47,17 @@ class Book{
 public class Question3 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner sc=new Scanner(System.in);
-		String name=sc.nextLine();
-		String email=sc.nextLine();
-		char gender=sc.next().charAt(0);
-		Author au=new Author(name,email,gender);
-		double price=sc.nextDouble();
-		int qtyinstock=sc.nextInt();
-		Book book=new Book(name,au,price,qtyinstock);
-		System.out.println(au);
-		System.out.println(book);
+		try (Scanner sc = new Scanner(System.in)) {
+			String name=sc.nextLine();
+			String email=sc.nextLine();
+			char gender=sc.next().charAt(0);
+			Author au=new Author(name,email,gender);
+			double price=sc.nextDouble();
+			int qtyinstock=sc.nextInt();
+			Book book=new Book(name,au,price,qtyinstock);
+			System.out.println(au);
+			System.out.println(book);
+		}
 	}
 
 }
